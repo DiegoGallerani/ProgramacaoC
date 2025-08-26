@@ -1,20 +1,19 @@
 #include <stdio.h>
 int main(){
 
-
-    //Variáveis para a Priemaira Carta
-    char estado1, codigo1[10], cidade1[20];
+    //Variáveis para a Priemaira Carta;
+    char estado1, codigo1[5], cidade1[20];
     int populacao1, pontos_turisticos1;
     float pib1, area1;
 
     //Variáveis para a Segunda Carta
-    char estado2, codigo2[10], cidade2[20];
+    char estado2, codigo2[5], cidade2[20];
     int populacao2, pontos_turisticos2;
     float pib2, area2;
 
-    printf("         BEM VINDOS AO SUPER TRUNFO PARA INCIANTES       \n");
+    printf("     BEM VINDOS AO SUPER TRUNFO: NIVEL NOVATO       \n");
     printf("\n");
-    printf("--------------  VERSÃO 1 E UNS QUEBRADO :P-----------\n");
+    printf("----------  VERSÃO 1 E UNS QUEBRADO :P------------\n");
     printf("\n");
     //CADASTRO DA PRIMEIRA CARTA
     printf("----------- CADASTRO DA PRIMEIRA CARTA -----------\n");
@@ -22,11 +21,11 @@ int main(){
     printf("Digite o Estado usando uma letra entre (A - H): ");
     scanf(" %c/n", &estado1);
 
-    printf("Digite o Código (ex: A01, H04): ");
-    scanf("%s/n", &codigo1);
+    printf("Digite o Código cobminando a letra do Estado (ex: A01, H04): ");
+    scanf("%s/n", codigo1);
 
     printf("Digite o Cidade: ");
-    scanf("%s/n", &cidade1);
+    scanf("%s/n", cidade1);
 
     printf("Digite a População: ");
     scanf("%d/n", &populacao1);
@@ -39,6 +38,7 @@ int main(){
 
     printf("Digite o Número de pontos Turísticos: ");
     scanf("%d/n", &pontos_turisticos1);
+    printf("\n");
 
     //CADASTRO DA SEGUNDA CARTA
     printf("----------- CADASTRO DA SEGUNDA CARTA -----------\n");
@@ -46,11 +46,11 @@ int main(){
     printf("Digite o Estado usando uma letra entre (A - H): ");
     scanf(" %c/n", &estado2);
 
-    printf("Digite o Código cominando a letra do Estado (ex: A01, H04): ");
-    scanf("%s/n", &codigo2);
+    printf("Digite o Código cobminando a letra do Estado (ex: A01, H04): ");
+    scanf("%s/n", codigo2);
 
     printf("Digite o Cidade: ");
-    scanf("%s/n", &cidade2);
+    scanf("%s/n", cidade2);
 
     printf("Digite a População: ");
     scanf("%d/n", &populacao2);
