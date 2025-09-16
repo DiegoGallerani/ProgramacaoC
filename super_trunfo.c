@@ -4,15 +4,15 @@ int main(){
     //Variáveis para a Priemaira Carta;
     char estado1, codigo1[5], cidade1[20];
     int populacao1, pontos_turisticos1;
-    float pib1, area1,densidade1,renda1;
+    float pib1, area1,densidade1,renda1, densidadeinvertida1, superpoder1;
 
     //Variáveis para a Segunda Carta
     char estado2, codigo2[5], cidade2[20];
     int populacao2, pontos_turisticos2;
-    float pib2, area2, densidade2, renda2;
+    float pib2, area2, densidade2, renda2, densidadeinvertida2, superpoder2;
 
 
-    printf("****** BEM VINDOS AO SUPER TRUNFO: NIVEL AVENTUREIRO *******     \n");
+    printf("****** BEM VINDOS AO SUPER TRUNFO: NIVEL MESTRE *******     \n");
     printf("\n");
     printf("----------  VERSÃO 2.ALGUMA.COISA :P------------\n");
     printf("\n");
@@ -68,13 +68,21 @@ int main(){
 
     //calculo de densidade populacional e renda per capta primeira carta;
     densidade1 = (float)(populacao1 / area1);
+    densidadeinvertida1 = (float)(area1 / populacao1);
     renda1 = (float)(pib1 / populacao1);
 
     //calculo de densidade populacional e renda per capta segunda carta;
     densidade2 = (float)(populacao2 / area2);
+    densidadeinvertida2 = (float)(area2 / populacao2);
     renda2 = (float)(pib2 / populacao2);
 
-    //RESULTADO PRIMEIRA CARTA 
+    //super poder - primeira carta
+    superpoder1 = (float)(populacao1 + area1 + pib1 + pontos_turisticos1 +renda1 + densidadeinvertida1);
+
+    //super poder - segunda carta
+    superpoder2 = (float)(populacao2 + area2 + pib2 + pontos_turisticos2 +renda2 + densidadeinvertida2);
+
+    //RESULTADO PRIMEIRA CARTA;
     printf("---------- CARTA 1 ----------\n");
     printf("\n");
     
@@ -87,9 +95,11 @@ int main(){
     printf("Números de pontos Turísticos: %d\n", pontos_turisticos1);
     printf("A Densidade Populacional é de : %.1f habitantes por Km² \n", densidade1);
     printf("O PIB per capita é de R$: %.2f por habitante \n", renda1);
+    printf("O inverso da Densidade Populacional é: %.5f Quilometros por Habitande\n", densidadeinvertida1);
+    printf("SUPER PODER CARTA 1: %.1f\n", superpoder1);
     printf("\n");
 
-    //RESULTADO SEGUNDA A
+    //RESULTADO SEGUNDA CARTA;
     printf("---------- CARTA 2 ----------\n");
     printf("\n");
     
@@ -102,7 +112,28 @@ int main(){
     printf("Números de pontos Turísticos: %d\n", pontos_turisticos2);
     printf("A Densidade Populacional é de : %.1f habitantes por Km² \n", densidade2);
     printf("O PIB per capita é de R$: %.2f por habitante \n", renda2);
+    printf("O inverso da Densidade Populacional é: %.5f Quilometros por Habitande\n", densidadeinvertida2);
+    printf("SUPER PODER CARTA 2: %.1f\n", superpoder2);
 
+    printf("\n");
+
+    // COMPARAÇÃO DAS CARTAS
+
+    printf("   *******************  COMPARAÇÃO DAS CARTAS  *******************   \n");
+    printf("\n");
+    printf("                       ** Dica de Resultados **\n");
+    printf("                               ↓↓↓↓↓↓\n");
+    printf("                        |   (1) Para SIM!    |\n");
+    printf("                        |   (0) Para NÃO!    |\n");
+    printf("\n");
+    printf("        POPULAÇÃO: Carta 1 venceu ? -------------------(%d)\n",populacao1 > populacao2);
+    printf("        ÁREA: Carta 1 venceu ? ------------------------(%d)\n",area1 > area2);
+    printf("        PIB: Carta 1 venceu ? -------------------------(%d)\n",pib1 > pib2);
+    printf("        PONTOS TURÍSTICOS: Carta 1 venceu ? -----------(%d)\n",pontos_turisticos1 > pontos_turisticos2);
+    printf("        DENSIDADE POPULACIONAL: Carta 1 venceu ?-------(%d)\n",densidade1 > densidade2);
+    printf("        PIB PER CAPITA: Carta 1 venceu ----------------(%d)\n",renda1 > renda2);
+    printf("        SUPER PODER: Carta 1 venceu ? -----------------(%d)\n",superpoder1 > superpoder2);
+    printf("\n");
     printf("\n");
 
     return 0;
